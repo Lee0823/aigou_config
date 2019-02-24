@@ -26,4 +26,4 @@ eureka:
     service-url:
       defaultZone: http://www.eureka-7001.com:7001/eureka
   instance:
-    prefer-ip-address: true #显示真实IP
+    prefer-ip-address: true  #显示真实IP
