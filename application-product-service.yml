@@ -1,0 +1,24 @@
+spring:
+  profiles:
+    active: dev
+---
+spring:
+  profiles: dev
+  application:
+    name: AIGOU-PRODUCT
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/aigou_product?useUnicode=true&characterEncoding=UTF-8  #防止中文乱码
+    username: root
+    password: root
+mybatis-plus:
+  mapper-locations: classpath:cn/itsource/aigou/mapper/*Mapper.xml #扫mapper映射
+  type-aliases-package: cn.itsource.aigou.domain,cn.itsource.aigou.query  #别名的配置
+server:
+  port: 8002
+eureka:
+  client:
+    service-url:
+      defaultZone: http://www.eureka-7001.com:7001/eureka
+  instance:
+    prefer-ip-address: true #显示真实IP
